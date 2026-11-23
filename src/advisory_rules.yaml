@@ -1,0 +1,1170 @@
+# ============================================================================
+# El Niño Watch Ghana — Farmer Advisory Rules
+# ============================================================================
+# This file is the SINGLE SOURCE OF TRUTH for all farmer advisory content.
+# A non-coder can edit the advice text without touching any Python code.
+#
+# Structure:
+#   crops:
+#     <crop_name>:
+#       regions:
+#         <region_or_zone>:
+#           stages:
+#             <planting_stage>:
+#               risk_level: low | moderate | high | very_high
+#               advice:
+#                 en: "English advice text"
+#                 tw: ""   ← Twi (stub — to be translated)
+#                 ga: ""   ← Ga (stub)
+#                 ee: ""   ← Ewe (stub)
+#                 ha: ""   ← Hausa (stub)
+#               source: "Source citation"
+#
+# Planting stages: pre_planting | planting | vegetative | flowering |
+#                  grain_fill | harvest | post_harvest
+#
+# Regions can use zone names (Coastal/South, Forest/Middle Belt, Northern)
+# or specific region names. Zone rules act as defaults; specific region
+# rules override them.
+#
+# DO NOT INVENT STATISTICS. Use only information from cited sources.
+# ============================================================================
+
+meta:
+  version: "1.0.0"
+  last_updated: "2026-11-01"
+  el_nino_event: "2026/27 (Forecast: Very Strong)"
+  general_disclaimer: >
+    This advice is based on historical patterns of El Niño effects in Ghana
+    and published GMet guidelines. It is not an official forecast. Always
+    consult your local agricultural extension officer and follow GMet
+    official bulletins.
+  sources:
+    - "Ghana Meteorological Agency (GMet) El Niño preparedness advisory, 2023"
+    - "NOAA CPC ENSO outlook, October 2026"
+    - "CGIAR / CIMMYT maize drought stress management guidelines"
+    - "Ghana Cocoa Board (COCOBOD) crop management guidelines"
+    - "IFAD water-smart agriculture guidelines for West Africa"
+
+# ---------------------------------------------------------------------------
+# GENERAL EL NIÑO GUIDANCE (applies across all crops and regions)
+# ---------------------------------------------------------------------------
+general_el_nino:
+  en: >
+    A strong El Niño event is forecast for late 2026 into 2027.
+    Historical patterns show that strong El Niño years are often associated
+    with below-normal rainfall in many parts of Ghana, especially in the
+    north and forest belt. Prepare for possible dry spells and heat stress.
+    Follow official GMet advisories for your area.
+  tw: ""
+  ga: ""
+  ee: ""
+  ha: ""
+
+# ---------------------------------------------------------------------------
+# CROPS
+# ---------------------------------------------------------------------------
+crops:
+
+  maize:
+    display_name: "Maize"
+    emoji: "🌽"
+    description: >
+      Maize is Ghana's most important staple crop. It is highly sensitive
+      to water stress during flowering and grain fill.
+
+    regions:
+
+      "Coastal/South":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Before planting, check GMet seasonal forecast for your district.
+                If a dry season is forecast, consider drought-tolerant maize
+                varieties (e.g., SWAN varieties from CIMMYT/CSIR). Prepare
+                irrigation or water storage if available.
+                Source: CIMMYT drought-tolerant maize guidelines.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CIMMYT/CSIR drought-tolerant varieties programme"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Plant early in the season to maximise use of early rains before
+                any mid-season dry spell. Use certified, drought-tolerant seed.
+                Apply starter fertiliser carefully — avoid heavy applications
+                without reliable rainfall forecast.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana crop calendar recommendations"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Monitor soil moisture. If a dry spell exceeds 10 days, apply
+                supplemental irrigation if possible, or mulch to retain soil
+                moisture. Watch for armyworm outbreaks which increase under
+                drought stress.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ CRITICAL STAGE. Maize is most sensitive to water stress
+                during flowering (tasseling and silking). Water stress at
+                this stage can reduce yield by 30–70%. If you have access
+                to any supplemental water, prioritise irrigation now.
+                Do not apply nitrogen fertiliser during dry spells.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CIMMYT maize stress management guide"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                Maintain soil moisture during grain fill. Heat stress
+                above 35°C can damage grain quality. If drought occurs,
+                early harvest of fodder may be better than waiting for
+                grain to fill. Consult your local extension officer.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CIMMYT drought-tolerant maize guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Dry conditions at harvest can be beneficial — lower grain
+                moisture means less post-harvest mould. Store in a dry,
+                cool place. Consider hermetic storage to protect against
+                aflatoxin during warm, dry post-harvest periods.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                If the season was poor due to dry spells, assess food security
+                situation early. Contact your local NADMO or MOFA office if
+                yields were severely reduced. Plan seed selection for next
+                season — prioritise drought-tolerant varieties.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "NADMO food security guidelines"
+
+      "Forest/Middle Belt":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                The forest belt typically receives two rainy seasons.
+                El Niño years have historically been associated with
+                weaker minor season (Sep–Nov) rains. If planting for
+                the minor season, have drought-tolerant varieties ready.
+                Monitor GMet advisories.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "GMet El Niño preparedness advisory"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Plant at the onset of rains confirmed by GMet.
+                El Niño can delay or weaken the onset of the minor season.
+                Do not plant too early based on one or two showers.
+                Use drought-tolerant, short-season varieties as insurance.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ CRITICAL STAGE. Same as Coastal/South: water stress at
+                flowering causes the greatest yield losses. If dry spells
+                are forecast, consider whether partial irrigation is possible.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CIMMYT maize stress management guide"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Monitor for dry spell impacts. Apply mulch to conserve soil
+                moisture. Avoid heavy urea application without rain forecast
+                as it can burn plant roots under dry conditions.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                If dry spell occurs during grain fill, prioritise any available
+                water for irrigation. Consider early harvest for silage
+                if grain fill is compromised.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CIMMYT drought-tolerant maize guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Drier harvest conditions reduce field losses. Ensure proper
+                drying before storage. Use hermetic sacks for small quantities.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Document yields and compare to past seasons. Report severe
+                shortfalls to MOFA. Begin seed planning for next season
+                with drought-tolerant options.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+      "Northern":
+        stages:
+          pre_planting:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Northern Ghana has only one rainy season (May–Oct).
+                A strong El Niño significantly increases the risk of
+                below-normal rainfall in this region. Prepare now:
+                use drought-tolerant varieties, plan for water harvesting,
+                and diversify crops (consider early millet or sorghum).
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "GMet El Niño preparedness advisory; CSIR-SARI guidelines"
+
+          planting:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Wait for confirmed onset of rains (not just 1–2 showers)
+                before planting. Early planting on false onset rains is a
+                major risk in El Niño years when onset is often delayed.
+                Use GMet district-level onset forecasts if available.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "GMet onset of rains forecast; CSIR-SARI guidelines"
+
+          vegetative:
+            risk_level: high
+            advice:
+              en: >
+                If rains become erratic, apply mulching and conservation
+                tillage. Consider tied ridges or half-moon catchments
+                to retain rainwater. Early-maturing varieties (e.g., 90-day
+                maize) can be harvested before the season ends.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD water-smart agriculture guidelines; CSIR-SARI"
+
+          flowering:
+            risk_level: very_high
+            advice:
+              en: >
+                ⚠️ CRITICAL AND HIGH-RISK in El Niño years for Northern Ghana.
+                Dry spells during flowering in this single-season region
+                can cause near-total crop failure. If drought is occurring,
+                contact your extension officer about emergency measures
+                and early warning food assistance programmes.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "GMet El Niño preparedness advisory; CSIR-SARI"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                Monitor grain fill carefully. Harvest early if the season
+                appears to be ending prematurely. Store any harvest immediately
+                in a dry, secure location. Report crop failure to NADMO early.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "NADMO food security guidelines"
+
+          harvest:
+            risk_level: moderate
+            advice:
+              en: >
+                If yield is reduced, avoid selling all grain at once
+                (prices may be high now but food security is paramount).
+                Use hermetic storage to maximise food availability.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: moderate
+            advice:
+              en: >
+                Report yield shortfalls to district NADMO and MOFA.
+                Plan for next season with drought-tolerant, short-season
+                varieties. Explore off-season opportunities if irrigation
+                is accessible (dry-season vegetable growing).
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana guidelines; NADMO"
+
+  cocoa:
+    display_name: "Cocoa"
+    emoji: "🍫"
+    description: >
+      Cocoa is Ghana's most important export crop. It is grown mainly
+      in the Forest/Middle Belt zone. El Niño-related dry spells can
+      affect flowering, pod development, and increase disease pressure.
+
+    regions:
+
+      "Forest/Middle Belt":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                If establishing new cocoa (replanting or new plot), El Niño
+                years with below-normal rainfall are not ideal for planting.
+                If you must plant, ensure shade trees are in place and
+                plan for supplemental watering of young seedlings.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "COCOBOD crop management guidelines"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Plant cocoa seedlings at the beginning of a reliable rainy
+                season. During El Niño, the minor season (Sep–Nov) may be
+                weaker — target the major season (Mar–Jul) for new planting
+                when possible. Maintain dense shade canopy.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "COCOBOD crop management guidelines"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Young cocoa trees (under 3 years) are most vulnerable to
+                dry spells. Apply mulch heavily around the base.
+                Water young trees manually during prolonged dry spells.
+                Avoid any activity that damages the shallow root system.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "COCOBOD/CRIG crop husbandry guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Cocoa flowers continuously but main flush coincides
+                with the beginning of the rainy seasons. Dry spells at
+                this stage cause flower drop and reduced pod set.
+                Maintain good shade and avoid stress from herbicide
+                application during dry periods.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CRIG (Cocoa Research Institute of Ghana) guidelines"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Pod development takes 5–6 months. Prolonged drought
+                can cause pod abortion and reduce bean size. Increased
+                risk of black pod disease (Phytophthora) when drought
+                is followed by heavy rainfall. Apply recommended fungicides
+                according to CRIG calendar. Source: CRIG guidelines.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CRIG (Cocoa Research Institute of Ghana) disease calendar"
+
+          harvest:
+            risk_level: moderate
+            advice:
+              en: >
+                Harvest ripe pods promptly to avoid black pod spread.
+                El Niño-associated irregular rainfall can create wet-dry
+                cycles favourable to black pod. Ferment and dry beans
+                carefully — if drying weather is unreliable, use
+                improved drying platforms.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "COCOBOD/CRIG post-harvest handling guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                After harvest, prune and dispose of diseased plant material.
+                Apply recommended fertiliser at the start of the next rainy
+                season. Report any significant yield changes to COCOBOD
+                Licensed Buying Company (LBC) for record keeping.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "COCOBOD crop management guidelines"
+
+  cassava:
+    display_name: "Cassava"
+    emoji: "🥔"
+    description: >
+      Cassava is Ghana's most drought-tolerant staple and a critical food
+      security crop. It is grown across all zones but especially in the south.
+
+    regions:
+
+      "Coastal/South":
+        stages:
+          pre_planting:
+            risk_level: low
+            advice:
+              en: >
+                Cassava is naturally drought-tolerant. Even in El Niño years,
+                established cassava can usually tolerate moderate dry spells.
+                Use improved varieties like Bankye Hemaa or Afisiafi if available.
+                Cassava is a good diversification option when maize faces high drought risk.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-CRI cassava variety recommendations"
+
+          planting:
+            risk_level: low
+            advice:
+              en: >
+                Plant stakes at the start of the rainy season. While cassava
+                tolerates drought, establishment requires some moisture.
+                Plant horizontal or slightly tilted stakes in well-drained soil.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          vegetative:
+            risk_level: low
+            advice:
+              en: >
+                Cassava manages well under drought once established.
+                Monitor for cassava mosaic virus and mealy bug, which
+                can worsen under stress. Apply recommended controls if detected.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-CRI pest management guidelines"
+
+          flowering:
+            risk_level: low
+            advice:
+              en: >
+                Cassava flowering is not a critical yield stage as it is
+                a root crop. Continue normal monitoring. Keep weeds controlled.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          grain_fill:
+            risk_level: low
+            advice:
+              en: >
+                Root bulking (equivalent to grain fill) is relatively
+                drought-tolerant. However, severe prolonged drought
+                (>3 months) can reduce root yield. Consider staggered
+                harvesting to manage food supply across the season.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-CRI cassava crop management"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest cassava between 8–24 months depending on variety.
+                If the main food crops (maize) have failed, cassava can be
+                harvested earlier as a food security buffer. Process surplus
+                into gari or fufu flour for extended storage.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Cassava spoils quickly after harvest. Process promptly.
+                In an El Niño year with food insecurity risk, cassava
+                processing into shelf-stable products is especially valuable.
+                Link to local processor or cooperative if possible.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest guidelines; MOFA Ghana"
+
+      "Forest/Middle Belt":
+        stages:
+          pre_planting:
+            risk_level: low
+            advice:
+              en: >
+                Cassava is a reliable drought backup in the forest belt.
+                Plant some cassava as insurance alongside maize,
+                especially in El Niño years.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana diversification guidelines"
+
+          planting:
+            risk_level: low
+            advice:
+              en: >
+                Same as Coastal/South: plant at onset of rains.
+                Use quality stakes (at least 25 cm) from healthy plants.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-CRI cassava planting guidelines"
+
+          vegetative:
+            risk_level: low
+            advice:
+              en: >
+                Monitor for cassava mosaic disease. Keep records of
+                affected plants for replanting planning.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-CRI pest management guidelines"
+
+          flowering:
+            risk_level: low
+            advice:
+              en: >
+                No critical action needed at flowering. Maintain weeding.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          grain_fill:
+            risk_level: low
+            advice:
+              en: >
+                Continue monitoring. If maize in neighbouring plots has
+                failed due to drought, begin planning cassava harvest
+                schedule as a food security measure.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest and process promptly. Consider gari or starch
+                production for longer shelf life.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Link surplus cassava to processors or markets.
+                Document lessons and varieties for next season planning.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+      "Northern":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Cassava is increasingly grown in the north as a drought buffer.
+                It is a good insurance crop in El Niño years.
+                Use improved varieties suited to the drier north such as
+                Brong or Afisiafi. Plant early in the rainy season.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana cassava trials"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Plant at the beginning of confirmed rains. In northern Ghana,
+                the season is shorter, so early planting maximises growth time.
+                Use mulch to conserve soil moisture.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana guidelines"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Apply mulch. If severe drought occurs, cassava may shed leaves
+                to survive — this is normal. It will regrow when rains resume.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana guidelines"
+
+          flowering:
+            risk_level: low
+            advice:
+              en: >
+                Continue normal monitoring. Cassava is relatively resilient.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana extension guidelines"
+
+          grain_fill:
+            risk_level: moderate
+            advice:
+              en: >
+                If the rainy season ends early (a risk in El Niño years),
+                roots may be smaller at harvest. Harvest as late as possible
+                without risking the crop to termites or pests.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest and process quickly in the dry season. Gari and
+                dried cassava flour are ideal for northern dry-season storage.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Store processed cassava in a cool, dry place.
+                Contact MOFA or NADMO if food security is a concern
+                after a poor season.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "NADMO food security guidelines"
+
+  rice:
+    display_name: "Rice"
+    emoji: "🌾"
+    description: >
+      Rice is grown in both lowland and upland systems across Ghana.
+      It is sensitive to water stress at tillering, panicle initiation,
+      and flowering. El Niño-related dry spells are a significant risk
+      for upland rice.
+
+    regions:
+
+      "Northern":
+        stages:
+          pre_planting:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Upland rice in northern Ghana faces high risk in El Niño
+                years due to irregular rainfall. Consider shifting area to
+                drought-tolerant crops (sorghum, early millet, cassava)
+                if water supply is uncertain. Lowland/valley bottom plots
+                are safer for rice in drought years.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "CSIR-SARI Northern Ghana guidelines; AfricaRice"
+
+          planting:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Wait for confirmed onset of rains before transplanting
+                or direct seeding. Stagger planting dates if possible.
+                Use short-duration varieties (90-day) to reduce drought exposure.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice drought management; CSIR-SARI"
+
+          vegetative:
+            risk_level: high
+            advice:
+              en: >
+                If growing lowland rice, maintain water depth in fields.
+                For upland rice, apply mulch and avoid excessive tillage.
+                Monitor for blast disease which can increase under drought stress.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice production guidelines"
+
+          flowering:
+            risk_level: very_high
+            advice:
+              en: >
+                ⚠️ CRITICAL STAGE. Rice is extremely sensitive to water
+                stress during heading and flowering. Even a 3–5 day drought
+                at this stage can cause near-total sterility (blank grains).
+                Prioritise any available irrigation water for this stage.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice drought stress management guidelines"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                Maintain moisture during grain fill. Heat stress
+                (>35°C) combined with drought reduces milling quality.
+                Harvest at the right moisture content to avoid shattering.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice production guidelines"
+
+          harvest:
+            risk_level: moderate
+            advice:
+              en: >
+                Harvest promptly when 80–85% of grains are golden.
+                Use tarpaulins for threshing to minimise losses.
+                If the season was poor, record yield data for MOFA.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice post-harvest guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Dry rice to 14% moisture before storage. Use hermetic
+                storage to prevent insect damage. Report yield data
+                to MOFA for national food security monitoring.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice post-harvest guidelines; MOFA Ghana"
+
+      "Coastal/South":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Southern Ghana lowland rice systems are more resilient
+                but can still be affected by erratic minor season rainfall
+                in El Niño years. Use improved lowland varieties.
+                Prepare water management structures in lowland plots.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice production guidelines; MOFA Ghana"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Target lowland plots where natural water retention
+                provides a buffer against rainfall deficits.
+                Use certified seed from MOFA or SEEDPAG.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana certified seed programme"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Monitor water levels in lowland plots.
+                If rains are below normal, top up with available
+                surface water if possible.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice production guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Protect rice at flowering from water stress.
+                Even in lowland systems, check that water table
+                is adequate during this critical stage.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice drought stress management"
+
+          grain_fill:
+            risk_level: moderate
+            advice:
+              en: >
+                Continue water management. Harvest at the right time
+                to avoid losses from bird damage (more common in
+                drought years when less food is available for birds).
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice production guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest and thresh on tarpaulins. Dry to 14% moisture.
+                Avoid post-harvest losses which are especially costly
+                in poor yield years.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice post-harvest guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Use hermetic storage or metal silos for rice grain.
+                Process surplus into parboiled rice for better shelf life.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "AfricaRice post-harvest guidelines; MOFA Ghana"
+
+  vegetables:
+    display_name: "Vegetables"
+    emoji: "🥦"
+    description: >
+      Vegetables (tomato, pepper, onion, leafy greens) are grown across
+      Ghana, often by smallholder women. They are highly water-sensitive
+      and usually require supplemental irrigation. El Niño dry spells
+      increase water demand and disease pressure.
+
+    regions:
+
+      "Coastal/South":
+        stages:
+          pre_planting:
+            risk_level: moderate
+            advice:
+              en: >
+                If growing rain-fed vegetables, monitor GMet forecasts closely.
+                El Niño years favour irrigated or dry-season vegetable
+                production over rain-fed. Secure water sources (boreholes,
+                rivers, tanks) before the season starts.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana vegetable production guidelines"
+
+          planting:
+            risk_level: moderate
+            advice:
+              en: >
+                Use transplants where possible to reduce water demand at
+                early stages. Harden seedlings in a shade nursery before
+                transplanting during dry spells.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana vegetable production guidelines"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Drip irrigation or watering cans are more efficient than
+                overhead irrigation in dry periods. Water in the morning
+                to reduce evaporation and fungal disease.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD water-smart agriculture guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Tomatoes and peppers are especially sensitive to heat
+                and drought at flowering — blossom drop occurs above 35°C.
+                Use shade netting if available. Water regularly.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana tomato production guidelines"
+
+          grain_fill:
+            risk_level: high
+            advice:
+              en: >
+                Maintain consistent soil moisture during fruit set
+                to prevent blossom end rot (tomatoes) and poor fruit fill.
+                Monitor for aphids and whitefly which thrive in hot, dry conditions.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana IPM guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest frequently and get produce to market quickly.
+                El Niño years with high temperatures accelerate ripening
+                and post-harvest deterioration. Coordinate with buyers
+                or aggregators in advance.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                If you have good yields in a dry season (from irrigation),
+                link to processors or build a cool store (if available).
+                Prices can be favourable when rain-fed production is low.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana market information guidelines"
+
+      "Northern":
+        stages:
+          pre_planting:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Rain-fed vegetable production in the north during El Niño
+                years is high-risk. Irrigated dry-season vegetable farming
+                (using river or borehole) is a better option. Focus on crops
+                like onion, tomato, and pepper that have strong market demand
+                and suit dry-season irrigation.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana vegetable production guidelines; CSIR-SARI"
+
+          planting:
+            risk_level: high
+            advice:
+              en: >
+                Establish a reliable water source before planting.
+                Use drip or furrow irrigation. Grow vegetables in the
+                dry season (Nov–Mar) when you can control water supply.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD water-smart agriculture guidelines"
+
+          vegetative:
+            risk_level: moderate
+            advice:
+              en: >
+                Manage irrigation carefully. Too much water can also cause
+                disease. Apply fertiliser in split doses, following rains
+                or irrigation events.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana vegetable production guidelines"
+
+          flowering:
+            risk_level: high
+            advice:
+              en: >
+                ⚠️ Monitor temperature. At temperatures above 35°C
+                (common in northern dry season), flower drop is a risk.
+                Use shade netting or plant earlier so flowering happens
+                before peak heat.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana tomato and pepper guidelines"
+
+          grain_fill:
+            risk_level: moderate
+            advice:
+              en: >
+                Manage water and pest control. Watch for tomato leaf miner
+                which is common in the north. Consult your local agro-input
+                dealer for recommended controls.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana IPM guidelines"
+
+          harvest:
+            risk_level: low
+            advice:
+              en: >
+                Harvest during the cooler morning hours. Transport quickly
+                to avoid heat damage. Link to aggregators or cold chain
+                where available.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "IFAD post-harvest loss reduction guidelines"
+
+          post_harvest:
+            risk_level: low
+            advice:
+              en: >
+                Tomatoes can be processed into paste for longer storage.
+                Keep financial records to plan next season's irrigation
+                investment.
+              tw: ""
+              ga: ""
+              ee: ""
+              ha: ""
+            source: "MOFA Ghana market information guidelines"

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Data files (large; keep only processed parquet in repo for small datasets)
+data/raw/*.gz
+data/raw/*.tif
+data/raw/*.zip
+data/raw/*.csv
+
+# Environment variables (sensitive)
+.env
+
+# Streamlit cache
+.streamlit/cache/
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
