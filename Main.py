@@ -181,7 +181,6 @@ with st.sidebar:
     st.divider()
 
     st.markdown("**Navigation**")
-    st.page_link("Main.py", label="🏠 Home", icon=None)
     st.page_link("app/1_Home.py", label="📊 Current Status", icon=None)
     st.page_link("app/2_History.py", label="📜 Historical Explorer", icon=None)
     st.page_link("app/3_Rainfall_Impact.py", label="🌧️ Rainfall Impact", icon=None)
