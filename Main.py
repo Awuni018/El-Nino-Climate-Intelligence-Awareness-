@@ -181,13 +181,13 @@ with st.sidebar:
     st.divider()
 
     st.markdown("**Navigation**")
-    st.page_link("app/1_Home.py", label="📊 Current Status", icon=None)
-    st.page_link("app/2_History.py", label="📜 Historical Explorer", icon=None)
-    st.page_link("app/3_Rainfall_Impact.py", label="🌧️ Rainfall Impact", icon=None)
-    st.page_link("app/4_Risk_Estimator.py", label="🎲 Risk Estimator", icon=None)
-    st.page_link("app/5_Sectors.py", label="🏭 Sector Impacts", icon=None)
-    st.page_link("app/6_Farmer_Advisory.py", label="🌱 Farmer Advisory", icon=None)
-    st.page_link("app/7_Methods.py", label="📖 Methods & Sources", icon=None)
+    st.page_link("pages/1_Home.py", label="📊 Current Status", icon=None)
+    st.page_link("pages/2_History.py", label="📜 Historical Explorer", icon=None)
+    st.page_link("pages/3_Rainfall_Impact.py", label="🌧️ Rainfall Impact", icon=None)
+    st.page_link("pages/4_Risk_Estimator.py", label="🎲 Risk Estimator", icon=None)
+    st.page_link("pages/5_Sectors.py", label="🏭 Sector Impacts", icon=None)
+    st.page_link("pages/6_Farmer_Advisory.py", label="🌱 Farmer Advisory", icon=None)
+    st.page_link("pages/7_Methods.py", label="📖 Methods & Sources", icon=None)
 
     st.divider()
     st.caption(
